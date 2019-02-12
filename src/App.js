@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import './App.css';
 import Live from './live'
+import SiteNav from './site-nav'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 
 class App extends Component {
 
@@ -11,13 +13,19 @@ class App extends Component {
     )
   }
 
+  renderSiteNav = () => {
+    return(
+      <SiteNav/>
+    )
+  }
+
   render() {
     return (
       <Fragment>
       <Router>
         <Switch>
           <Route path="/live" component={this.renderLivePage} />
-          <Route />
+          <Route path="/" component={this.renderSiteNav}/>
         </Switch>
       </Router>
       </Fragment>

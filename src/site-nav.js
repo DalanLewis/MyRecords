@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react'
+import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -10,15 +10,19 @@ class SiteNav extends Component {
                     <h1>
                         My-Records.com
                     </h1>
-                    <section>
-                        <Link to="live">My</Link>
-                        <div>Yours (coming soon)</div>
-                        <div>Record</div>
-                        <div>Info</div>
-                    </section>
+                    <article className='navbox'>
+                        <div className='topnav'>
+                            <Link to="live">My</Link>
+                            <Link to=" ">Yours (coming soon)</Link>
+                        </div>
+                        <div className='botnav'>
+                            <Link to=" ">Record</Link>
+                            <Link to=" ">Info</Link>
+                        </div>
+                    </article>
                 </div>
             </Fragment>
         )
-    } 
+    }
 }
 export default SiteNav
